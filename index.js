@@ -147,16 +147,25 @@ const checkForCollision = () => {
     if(flappyWindowBottom >= resolutionHeight){
         flappyWindow.lost = true;
         flappyWindow.document.getElementsByClassName('die')[0].play();
+        flappyWindow.window.close()
+        firstObstacleWindow.window.close()
+        secondObstacleWindow.window.close()
     }
 
     if(flappyWindow.screenY <= firstObstacleWindowBottom && firstObstacleWindowLeft <= flappyWindowRight){
         flappyWindow.lost = true;
         flappyWindow.document.getElementsByClassName('hit')[0].play();
+        flappyWindow.window.close()
+        firstObstacleWindow.window.close()
+        secondObstacleWindow.window.close()
     }
 
     if(flappyWindowBottom >= secondObstacleWindowTop && flappyWindowRight >= secondObstacleWindowLeft){
         flappyWindow.lost = true;
         flappyWindow.document.getElementsByClassName('hit')[0].play();
+        flappyWindow.window.close()
+        firstObstacleWindow.window.close()
+        secondObstacleWindow.window.close()
     }
 }
 
