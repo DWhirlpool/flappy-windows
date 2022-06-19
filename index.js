@@ -79,6 +79,7 @@ const moveFlappy = () => {
 const startGame = () => {
     hideIntro();
     flappyWindow.lost = false;
+    scoreDiv.innerText = '0';
     moveObstacle();
 }
 
@@ -94,6 +95,7 @@ const restartGame = () => {
         secondObstacleWindow.moveTo(resolutionWidth - 100, resolutionHeight - 150);
         flappyWindow.lost = false;
         displayScore(0);
+        scoreDiv.innerText = '0';
         window.requestAnimationFrame(moveObstacle);
     }
 }
