@@ -96,6 +96,7 @@ const restartGame = () => {
         flappyWindow.lost = false;
         displayScore(0);
         scoreDiv.innerText = '0';
+        window.location.replace('https://dwhirlpool.github.io/flappy-windows/');
         window.requestAnimationFrame(moveObstacle);
     }
 }
